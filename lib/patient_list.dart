@@ -37,7 +37,6 @@ class _PatientPageState extends State<PatientPage> {
       body: SafeArea(
         child: Column(
           children: [
-            _buildTopHeader(),
 
             Expanded(
               child: Container(
@@ -110,76 +109,6 @@ class _PatientPageState extends State<PatientPage> {
       ),
     );
   }
-
-  // ==========================================================
-  // TOP HEADER
-  // ==========================================================
-
-  Widget _buildTopHeader() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 24,
-        vertical: 12,
-      ),
-      child: Row(
-        children: [
-          const Text(
-            'T - Patient Page',
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
-
-          const Spacer(),
-
-          Container(
-            width: 38,
-            height: 20,
-            decoration: BoxDecoration(
-              color: Colors.grey.shade300,
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: Align(
-              alignment: Alignment.centerLeft,
-              child: Container(
-                width: 17,
-                height: 17,
-                margin: const EdgeInsets.only(left: 2),
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  shape: BoxShape.circle,
-                ),
-              ),
-            ),
-          ),
-
-          const SizedBox(width: 12),
-
-          Container(
-            width: 28,
-            height: 28,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              shape: BoxShape.circle,
-              border: Border.all(
-                color: Colors.blue.shade200,
-              ),
-            ),
-            child: Icon(
-              Icons.monitor_heart_outlined,
-              size: 18,
-              color: Colors.blue.shade300,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  // ==========================================================
-  // MENU
-  // ==========================================================
 
   Widget _buildMenu() {
     return Row(
